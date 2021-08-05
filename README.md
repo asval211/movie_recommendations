@@ -55,7 +55,7 @@ After many models and trials, we created three final models. The models created 
 ## For More Information
 Please review our full analysis in [our Jupyter Notebook Money](./notebooks/report/Final_Money.ipynb), [our Jupyter Notebook Winners](./notebooks/report/final_pga_golf_data_winners.ipynb), [our Jupyter Notebook Points](./notebooks/report/Final_Points.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
 
-For any additional questions, please contact **Elliott Iturbe at eaiturbe@bsc.edu, Cameron DeArman at cmdearma@bsc.edu, or Alex Valencia at asvalencia1688@gmail.com**
+For any additional questions, please contact **Alex Valencia at asvalencia1688@gmail.com or Mallory Wilson at mallorye1103@gmail.com.**
 
 ## Repository Structure
 
