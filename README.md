@@ -3,18 +3,15 @@
 **Authors:** Alex Valencia, Mallory Wilson
 
 ## Overview
-The goal of this project is to create the best movie recommendation system model for owners of a small company so they can better predict which movies each user will want to watch next.
+The goal of this project is to create the best movie recommendation system model for MovieLens, a movie recommendation service, so they can better predict which movies each user will want to watch next.
 
 ## Business Problem
-Small company would like to sponsor a golfer and needs to know how impactful their season will be. To help them in this area, we will create multiple models to help predict different targets (money, points, and winners) in order to help them in this decision process.
+MovieLens would like their customers to use their movie recommendation service to find movies they're most interested in watching. In order to do this, we will create the best movie recommendation system model to help predict the top ten most similar movies each user should watch based on their prior movie selections.
 
 ## Data
-We examined data on rounds, gir, average_putts, average_scrambling, average_score, points, top_10, average_sg_putts, average_sg_total, sg:ott, sg:apr, sg:arg, distance_fairway, and winners against **money**.
+We examined data from ratings.csv on userId, movieId, and rating.
 
-We examined data on rounds, fairway_percentage, year, avg_distance, gir, average_putts, average_scrambling, average_score, top_10, average_sg_putts, average_sg_total, sg:ott, sg:apr, sg:arg, and money against **winners**.
-
-We also examined data on rounds, gir, average_putts, average_scrambling, average_score, money, top_10, average_sg_putts, average_sg_total, sg:ott, sg:apr, sg:arg, distance_fairway, and winners against **point_range**.
-
+We examined data from movies.csv on movieId and title.
 
 ## Methods
 Our process started with exploring the data set provided to obtain a stronger understanding of what information we were working with. After some initial analysis of the data, we replaced a small handful of null values, combined columns in various ways to give us a new featured engineered column, and changed the datatypes for some of the columns in the data set.
