@@ -56,14 +56,14 @@ This visualization shows the top ten movies our user should watch after selectin
 
 ![graph5](./images/Pointsbywinners:nonwinnersbox.png)
 
-# Next Steps
-One idea we would like to pursue in the future is to take all our models and combine them in a function. You would use this function to write in a name and year, and then get back a 'Yes' or 'No' based on whether or not he made enough money, fell in the correct range of points, and had a chance to be a winner. In addition, we want to expand our understanding of our **point_range** and how we can use our range to predict who would then be in the upper-quartile range in future seasons. We also want to put in a single players stats and be told by the model based on our parameters whether we should sponsor them or not. 
+## Next Steps
+One idea we would like to pursue in the future is to make a recommendation system model based on movie tags. You would use this model to figure out the correlation between tags for movies with similar tags and use that information to output movie recommendations based on how similar the tags are to each other. We used a small dataset from MovieLens to create our movie recommendation system model and we want to use a bigger dataset so we can include more movies for improved performance. Achieving this may require using a computer that can handle more storage or figuring out if there's a way to free up orage on our current computers. We also want to find the demographics of each user so we can better predict which movies they will want to watch next.
 
 ## Conclusions
 Our recommendation system model created gave us ten movies that were the most similar to the movie chosen by the user. Our model gives an output on what movies each user will enjoy watching next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
-Please review our full analysis in [our Jupyter Notebook Money](./notebooks/report/Final_Money.ipynb), [our Jupyter Notebook Winners](./notebooks/report/final_pga_golf_data_winners.ipynb), [our Jupyter Notebook Points](./notebooks/report/Final_Points.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
+Please review our full analysis in [our Jupyter Notebook Movie Recommendation System Model](./notebooks/report/Final_Money.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
 
 For any additional questions, please contact **Alex Valencia at asvalencia1688@gmail.com or Mallory Wilson at mallorye1103@gmail.com.**
 
