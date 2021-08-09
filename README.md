@@ -32,13 +32,13 @@ We filtered our datasets by counting the number of ratings each movie received, 
 
 This visualization shows the number of users who voted for each movie, and the red line represents which movies had votes from 10 or more users.
 
-![graph1](./images/3mostcorr.png)
+![graph1](./images/scatterplot1.png)
 
 We filtered our datasets even more by counting the number of times a user rated a movie, and then we kept all users who had voted for 50 or more movies.
 
 This visualization shows the number of times a user voted for a movie, and the red line represents which users voted for 50 or more movies.
 
-![graph2](./images/Moneybywinners:nonwinnersbox.png)
+![graph2](./images/scatterplot2.png)
 
 We combined these two filters together and created our final dataset we used to build our recommendation system model.
 
@@ -49,7 +49,7 @@ For our Final Model, we merged the 'ratings' dataset with the 'movies' dataset. 
 
 This visualization shows the most frequent mean ratings on the rating scale from the 'ratings_data' dataset.
 
-![graph3](./images/Moneybywinners:nonwinnersbox.png)
+![graph3](./images/relplot.png)
 
 We created a new dataframe where we correlated the ratings from the movie "Heat" with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
 
@@ -58,17 +58,17 @@ After building a function for our Baseline Model, we were able to recommend ten 
 
 This visualization shows the top ten movies our user should watch after selecting **A Beautiful Mind**.
 
-![graph4](./images/Pointsbywinners:nonwinnersbox.png)
+![graph4](./images/a_beautiful_mind.png)
 
 This visualization shows the top ten movies our user should watch after selecting **Forrest Gump**.
 
-![graph5](./images/Pointsbywinners:nonwinnersbox.png)
+![graph5](./images/forrest_gump.png)
 
 After building our Final Model, we were able to figure out the ten most correlated movies to "Heat" and how many ratings each recommended movie received.
 
-This visualization shows the outpt from the Final Model:
+This visualization shows the output from the Final Model:
 
-![graph6](./images/Pointsbywinners:nonwinnersbox.png)
+![graph6](./images/final_model.png)
 
 We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the BaselineOnly model where the RMSE = 0.8727. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7531.
 
@@ -79,7 +79,7 @@ One idea we would like to pursue in the future is to make a recommendation syste
 Our Final Model is the best performing recommendation system model in selecting ten movies that were the most similar to the movie chosen by the user. This is because it's RMSE is significantly smaller compared to our Baseline Model, confirming it's more effective at finding movies users will most likely want to watch next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
-Please review our full analysis in [our Jupyter Notebook Movie Recommendation System Model](./notebooks/report/Final_Money.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
+Please review our full analysis in [our Jupyter Notebook Movie Recommendation System Model](./notebooks/alex/movie_recommendation_system.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
 
 For any additional questions, please contact **Alex Valencia at asvalencia1688@gmail.com or Mallory Wilson at mallorye1103@gmail.com.**
 
