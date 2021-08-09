@@ -9,45 +9,58 @@ The goal of this project is to create the best movie recommendation system model
 MovieLens would like their customers to use their movie recommendation service to find movies they're most interested in watching. In order to do this, we will create the best movie recommendation system model to help predict the top ten most similar movies each user should watch based on their prior movie selections.
 
 ## Data
-We examined data from ratings.csv on **userId**, **movieId**, and **rating**.
+We examined the dataset ratings.csv on **userId**, **movieId**, and **rating**.
 
-We examined data from movies.csv on **movieId** and **title**.
+We examined the dataset movies.csv on **movieId** and **title**.
+
+We examined the dataset tags.csv on **userId**, **movieId**, and **tag**.
+
+We examined the dataset links.csv on **movieId**, **imdbId**, and **tmdbId**.
 
 ## Methods
-Our process started with exploring the data set provided to obtain a stronger understanding of what information we were working with. After some initial analysis of the data, we replaced a small handful of null values, combined columns in various ways to give us a new featured engineered column, and changed the datatypes for some of the columns in the data set.
+We explored all four datasets provided to gain a better understanding of what information we were working with. After exploring all of the data, we decided to focus exclusively on the 'ratings' dataset and the 'movies' dataset. We made additional changes to the 'ratings' dataset by reshaping it in the following ways:
 
-This visualization shows the three most correlated values to **money**.
+1. 'movieId' was set as the index.
+2. 'userId' was set as the columns.
+3. 'rating' was set as the values within the newly designed dataset.
+4. Any ratings with a *NaN* value was changed to zero.
+
+We filtered our datasets by counting the number of ratings each movie received, and then we kept all movies that received votes from 10 or more users.
+
+This visualization shows the number of users who voted for each movie, and the red line represents which movies had votes from 10 or more users.
 
 ![graph1](./images/3mostcorr.png)
 
-This visualization shows the amount of money earned by winners and non-winners in a given year.
+We filtered our datasets even more by counting the number of times a user rated a movie, and then we kept all users who had voted for 50 or more movies.
+
+This visualization shows the number of times a user voted for a movie, and the red line represents which users voted for 50 or more movies.
 
 ![graph2](./images/Moneybywinners:nonwinnersbox.png)
 
-This visualization shows the amount of points accumulated by winners and non-winners in a given year.
+We combined these two filters together and created our final dataset we used to build our recommendation system model.
+
+Next, we inserted the ratings from our final dataset in a **CSR Matrix** because it's the best tool that helps reduce sparsity in our model. Then we took our CSR Matrix and fit it into a KNN algorithm called **NearestNeighbors**. This allowed us to select *cosine similarity* as a metric in our recommendation system model so we could find the top ten most similar movies to recommend based on what movies each user decides to watch.
+
+## Results
+After building a function for our movie recommendation system model, we were able to recommend ten movies to users based on which movie they decided to watch first.
+
+This visualization shows the top ten movies our user should watch after selecting **A Beautiful Mind**.
 
 ![graph3](./images/Pointsbywinners:nonwinnersbox.png)
 
+This visualization shows the top ten movies our user should watch after selecting **Star Wars**.
 
-During development we used a basic baseline model for all of our three models which yielded various scores including accuracy, precision and recall based on which was the appropriate score for the model. For all our models we tested, please refer back to the baseline models for score comparison. 
+![graph4](./images/Pointsbywinners:nonwinnersbox.png)
 
+This visualization shows the top ten movies our user should watch after selecting **Forrest Gump**.
 
-## Results
-After a good amount of trial and error in the **money** model, we arrived at our final advanced XGBoost model which yielded the following Accuracy scores: training = .956, validation = .955, and test = .921; the following Precision scores: training = .965, validation = .971, and test = .935; and the following Recall scores: training = .946, validation = .935, and test = .910.
-
-After creating a decent baseline model for **winners**, we arrived at a final Support Vector Machine model which yielded the following Accuracy scores: training = .894, validation = .895, and test = .895.
-
-For our last model on **point_range**, the baseline was not very helpful so we had a lot of work to do and ultimatly landed on a GridSearch using a Decision Tree that gave us the following Accuracy scores: training = .897, validation = .830, and test = .780.
-
-
-
+![graph5](./images/Pointsbywinners:nonwinnersbox.png)
 
 # Next Steps
 One idea we would like to pursue in the future is to take all our models and combine them in a function. You would use this function to write in a name and year, and then get back a 'Yes' or 'No' based on whether or not he made enough money, fell in the correct range of points, and had a chance to be a winner. In addition, we want to expand our understanding of our **point_range** and how we can use our range to predict who would then be in the upper-quartile range in future seasons. We also want to put in a single players stats and be told by the model based on our parameters whether we should sponsor them or not. 
 
 ## Conclusions
-After many models and trials, we created three final models. The models created have given the company three diffrent measures to evaluate a player, but ultimatly making the decision to sponsor a player comes down to more than the models. A player's name and year can be put through the functions provided which gives an output on if they'll make enough money, fall in the correct points range, as well as if they have a chance to be a winner. However, the list of players that pass these tests are then up for debate among the company based on various other attributes such as character and/or social media success. 
-
+Our recommendation system model created gave us ten movies that were the most similar to the movie chosen by the user. Our model gives an output on what movies each user will enjoy watching next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
 Please review our full analysis in [our Jupyter Notebook Money](./notebooks/report/Final_Money.ipynb), [our Jupyter Notebook Winners](./notebooks/report/final_pga_golf_data_winners.ipynb), [our Jupyter Notebook Points](./notebooks/report/Final_Points.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
