@@ -1,4 +1,4 @@
-# Movie Recommendations
+# Movie Recommendation System Model
 
 **Authors:** Alex Valencia, Mallory Wilson
 
