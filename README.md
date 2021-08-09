@@ -18,7 +18,10 @@ We examined the dataset tags.csv on **userId**, **movieId**, and **tag**.
 We examined the dataset links.csv on **movieId**, **imdbId**, and **tmdbId**.
 
 ## Methods
-We explored all four datasets provided to gain a better understanding of what information we were working with. After exploring all of the data, we decided to focus exclusively on the 'ratings' dataset and the 'movies' dataset. We made additional changes to the 'ratings' dataset by reshaping it in the following ways:
+We explored all four datasets provided to gain a better understanding of what information we were working with. After exploring all of the data, we decided to focus exclusively on the 'ratings' dataset and the 'movies' dataset.
+
+### Baseline Model
+For our Baseline Model, we made additional changes to the 'ratings' dataset by reshaping it in the following ways:
 
 1. 'movieId' was set as the index.
 2. 'userId' was set as the columns.
@@ -41,14 +44,19 @@ We combined these two filters together and created our final dataset we used to 
 
 Next, we inserted the ratings from our final dataset in a **CSR Matrix** because it's the best tool that helps reduce sparsity in our model. Then we took our CSR Matrix and fit it into a KNN algorithm called **NearestNeighbors**. This allowed us to select *cosine similarity* as a metric in our recommendation system model so we could find the top ten most similar movies to recommend based on what movies each user decides to watch.
 
+### Final Model
+For our Final Model, we merged the 'ratings' dataset with the 'movies' dataset. We filtered the merged dataset by calculating the mean of ratings for each movie and converted it into a new dataframe called 'ratings_data'. We added a new column called '# of ratings' where we counted the number of ratings each movie received.
+
+This visualization shows the most frequent mean ratings on the rating scale from the 'ratings_data' dataset.
+
+![graph3](./images/Moneybywinners:nonwinnersbox.png)
+
+We created a new dataframe where we correlated the ratings from the movie "Heat" with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
+
 ## Results
-After building a function for our movie recommendation system model, we were able to recommend ten movies to users based on which movie they decided to watch first.
+After building a function for our Baseline Model, we were able to recommend ten movies to users based on which movie they decided to watch first.
 
 This visualization shows the top ten movies our user should watch after selecting **A Beautiful Mind**.
-
-![graph3](./images/Pointsbywinners:nonwinnersbox.png)
-
-This visualization shows the top ten movies our user should watch after selecting **Star Wars**.
 
 ![graph4](./images/Pointsbywinners:nonwinnersbox.png)
 
@@ -56,11 +64,19 @@ This visualization shows the top ten movies our user should watch after selectin
 
 ![graph5](./images/Pointsbywinners:nonwinnersbox.png)
 
+After building our Final Model, we were able to figure out the ten most correlated movies to "Heat" and how many ratings each recommended movie received.
+
+This visualization shows the outpt from the Final Model:
+
+![graph6](./images/Pointsbywinners:nonwinnersbox.png)
+
+We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the BaselineOnly model where the RMSE = 0.8727. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7531.
+
 ## Next Steps
 One idea we would like to pursue in the future is to make a recommendation system model based on movie tags. You would use this model to figure out the correlation between tags for movies with similar tags and use that information to output movie recommendations based on how similar the tags are to each other. We used a small dataset from MovieLens to create our movie recommendation system model and we want to use a bigger dataset so we can include more movies for improved performance. Achieving this may require using a computer that can handle more storage or figuring out a solution to free up storage on our current computers. We also want to find the demographics of each user so we can better predict which movies they will want to watch next.
 
 ## Conclusions
-Our recommendation system model created gave us ten movies that were the most similar to the movie chosen by the user. Our model gives an output on what movies each user will enjoy watching next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
+Our Final Model is the best performing recommendation system model in selecting ten movies that were the most similar to the movie chosen by the user. This is because it's RMSE is significantly smaller compared to our Baseline Model, confirming it's more effective at finding movies users will most likely want to watch next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
 Please review our full analysis in [our Jupyter Notebook Movie Recommendation System Model](./notebooks/report/Final_Money.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
