@@ -79,7 +79,7 @@ One idea we would like to pursue in the future is to make a recommendation syste
 Our Final Model is the best performing recommendation system model in selecting ten movies that were the most similar to the movie chosen by the user. This is because it's RMSE is significantly smaller compared to our Baseline Model, confirming it's more effective at finding movies users will most likely want to watch next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
-Please review our full analysis in [our Jupyter Notebook Movie Recommendation System Model](./notebooks/alex/movie_recommendation_system.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
+Please review our full analysis in [our Jupyter Notebook Baseline Model](./notebooks/alex/movie_recommendation_system.ipynb), [our Jupyter Notebook Final Model](./notebooks/mallory/final_model.ipynb) or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
 
 For any additional questions, please contact **Alex Valencia at asvalencia1688@gmail.com or Mallory Wilson at mallorye1103@gmail.com.**
 
