@@ -9,9 +9,9 @@ The goal of this project is to create the best movie recommendation system model
 MovieLens would like their customers to use their movie recommendation service to find movies they're most interested in watching. In order to do this, we will create the best movie recommendation system model to help predict the top ten most similar movies each user should watch based on their prior movie selections.
 
 ## Data
-We examined data from ratings.csv on userId, movieId, and rating.
+We examined data from ratings.csv on **userId**, **movieId**, and **rating**.
 
-We examined data from movies.csv on movieId and title.
+We examined data from movies.csv on **movieId** and **title**.
 
 ## Methods
 Our process started with exploring the data set provided to obtain a stronger understanding of what information we were working with. After some initial analysis of the data, we replaced a small handful of null values, combined columns in various ways to give us a new featured engineered column, and changed the datatypes for some of the columns in the data set.
