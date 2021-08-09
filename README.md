@@ -3,7 +3,7 @@
 **Authors:** Alex Valencia, Mallory Wilson
 
 ## Overview
-The goal of this project is to create the best models for owners of a small company in order for them to make a business decision on which golfer they wish to sponsor. Descriptive analyses of data on previous statistics revealed that our models would take in a number of features involving all aspects of the game of golf.
+The goal of this project is to create the best movie recommendation system model for owners of a small company so they can better predict which movies each user will want to watch next.
 
 ## Business Problem
 Small company would like to sponsor a golfer and needs to know how impactful their season will be. To help them in this area, we will create multiple models to help predict different targets (money, points, and winners) in order to help them in this decision process.
