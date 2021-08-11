@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the title that appears in the browser tab.
+      Replace it with the title of your app
+    -->
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" media="screen" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Movie Results</h1>
+      </div>
+      <div class="container">
+        <!-- 
+          This table contains the result as a large number surrounded by smaller
+          text. It uses a table rather than bootstrap rows/cols in order to use
+          the align-middle CSS class
+        -->
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+                <th>Movie Title</th>
+                <th>Correlation with Selected Movie</th>
+                <th>Number of Ratings</th>
+            </tr>
+            {% for row in prediction %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1]|round(2) }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <hr>
+        <div class="row">
+          <div class="col" style="text-align: center;">
+            <!-- 
+              Replace this with something relevant, maybe a freshly-generated
+              matplotlib graph?
+            -->
+            <!--img src="{{ url_for('static', filename='upward_sloping_chart.png') }}" 
+              alt="upward sloping chart" width="50%"-->
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col" style="text-align: center;">
+            <a href="/">Go back home</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </body>
+</html>
