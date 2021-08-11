@@ -51,7 +51,7 @@ This visualization shows the most frequent mean ratings on the rating scale from
 
 ![graph3](./images/relplot.png)
 
-We created a new dataframe where we correlated the ratings from the movie "Heat" with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
+We created a new dataframe where we correlated the ratings from a selected movie with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
 
 ## Results
 After building a function for our Baseline Model, we were able to recommend ten movies to users based on which movie they decided to watch first.
