@@ -51,32 +51,44 @@ This visualization shows the most frequent mean ratings on the rating scale from
 
 ![graph3](./images/relplot.png)
 
-We created a new dataframe where we correlated the ratings from the movie "Heat" with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
+We created a new dataframe where we correlated the ratings from a selected movie with the rest of the movies from the 'ratings_data' dataset. And to ensure the top ten strongest correlation values were picked up, we only accepted movies that received 50 or more ratings from users. 
 
 ## Results
 After building a function for our Baseline Model, we were able to recommend ten movies to users based on which movie they decided to watch first.
 
-This visualization shows the top ten movies our user should watch after selecting **A Beautiful Mind**.
+This visualization shows the top ten movies our user should watch after selecting **Shrek 2**.
 
-![graph4](./images/a_beautiful_mind.png)
+![graph4](./images/shrek_2.PNG)
 
-This visualization shows the top ten movies our user should watch after selecting **Forrest Gump**.
+This visualization shows the top ten movies our user should watch after selecting **Harry Potter and the Chamber of Secrets**.
 
-![graph5](./images/forrest_gump.png)
+![graph5](./images/harry_potter_2.PNG)
 
-After building a function for our Final Model, we were able to figure out the ten most correlated movies to "Heat" and how many ratings each recommended movie received.
+This visualization shows the top ten movies our user should watch after selecting **Inception**.
 
-This visualization shows the output from the Final Model:
+![graph6](./images/inception.PNG)
 
-![graph6](./images/final_model.png)
+After building a function for our Final Model, we were able to figure out the top ten most recommended movies with stronger correlations and we reveal how many ratings each recommended movie received.
 
-We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the BaselineOnly model where the RMSE = 0.8727. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7877.
+This visualization shows the top ten movies our user should watch after selecting **Shrek 2**.
+
+![graph7](./images/shrek_2_update.PNG)
+
+This visualization shows the top ten movies our user should watch after selecting **Harry Potter and the Chamber of Secrets**.
+
+![graph5](./images/harry_potter_2_update.PNG)
+
+This visualization shows the top ten movies our user should watch after selecting **Inception**.
+
+![graph6](./images/inception_update.PNG)
+
+We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.8715. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7877.
 
 ## Next Steps
 One idea we would like to pursue in the future is to make a recommendation system model based on movie tags. You would use this model to figure out the correlation between tags for movies with similar tags and use that information to output movie recommendations based on how similar the tags are to each other. We used a small dataset from MovieLens to create our movie recommendation system model and we want to use a bigger dataset so we can include more movies for improved performance. Achieving this may require using a computer that can handle more storage or figuring out a solution to free up storage on our current computers. We also want to find the demographics of each user so we can better predict which movies they will want to watch next.
 
 ## Conclusions
-Our Final Model is the best performing recommendation system model in selecting ten movies that were the most similar to the movie chosen by the user. This is because it's RMSE is significantly smaller compared to our Baseline Model, confirming it's more effective at finding movies users will most likely want to watch next. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
+Our Final Model is the best performing recommendation system model in selecting ten movies that were the most similar to the movie chosen by the user. This is because it's RMSE is significantly smaller compared to our Baseline Model, and it's able to select recommended movies with significantly stronger correlation values. In the end, making the decision whether or not to watch a movie comes down to each user's personal preferences.
 
 ## For More Information
 Please review our full analysis in [our Jupyter Notebook Baseline Model](./notebooks/alex/movie_recommendation_system.ipynb), [our Jupyter Notebook Final Model](./notebooks/mallory/final_notebook.ipynb), or our [presentation](./Golf_Sponsorship_for_our_client.pdf).
