@@ -56,19 +56,23 @@ We created a new dataframe where we correlated the ratings from the movie "Heat"
 ## Results
 After building a function for our Baseline Model, we were able to recommend ten movies to users based on which movie they decided to watch first.
 
-This visualization shows the top ten movies our user should watch after selecting **A Beautiful Mind**.
+This visualization shows the top ten movies our user should watch after selecting **Shrek 2**.
 
-![graph4](./images/a_beautiful_mind.png)
+![graph4](./images/shrek_2.PNG)
 
-This visualization shows the top ten movies our user should watch after selecting **Forrest Gump**.
+This visualization shows the top ten movies our user should watch after selecting **Harry Potter and the Chamber of Secrets**.
 
-![graph5](./images/forrest_gump.png)
+![graph5](./images/harry_potter_2.PNG)
 
-After building a function for our Final Model, we were able to figure out the ten most correlated movies to "Heat" and how many ratings each recommended movie received.
+This visualization shows the top ten movies our user should watch after selecting **Inception**.
 
-This visualization shows the output from the Final Model:
+![graph6](./images/inception.PNG)
 
-![graph6](./images/final_model.png)
+After building a function for our Final Model, we were able to figure out the top ten most recommended movies with stronger correlations and we reveal how many ratings each recommended movie received.
+
+This visualization shows the top ten movies our user should watch after selecting **Shrek 2**.
+
+![graph7](./images/final_model.png)
 
 We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the BaselineOnly model where the RMSE = 0.8727. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7877.
 
