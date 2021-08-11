@@ -56,11 +56,25 @@
               nested <div>s to achieve the desired layout
             -->
             <form action="/make_prediction" method="post">
-              <label for="input-1">Movie Title</label>
-              <input type="text" id="input-1" name="movie_title" value="Harry Potter and the Chamber of Secrets (2002)">
-              <br>
-              <!-- You shouldn't need to change the submit button -->
-              <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
+                <label for="input-1">Movie Title</label>
+                <select id="input-1"  name="movie_title">
+                    <option value="Harry Potter and the Chamber of Secrets (2002)">Harry Potter and the Chamber of Secrets</option>
+                    <option value="Spider-Man (2002)">Spider-Man</option>
+                    <option value="Avengers, The (2012)">The Avengers</option>
+                    <option value="Inception (2010)">Inception</option>
+                    <option value="Spaceballs (1987)">Spaceballs</option>
+                    <option value="Star Trek: Generations (1994)">Star Trek: Generations</option>
+                    <option value="Maverick (1994)">Maverick</option>
+                    <option value="Animal House (1978)">Animal House</option>
+                    <option value="Three Musketeers, The (1993)">The Three Musketeers</option>
+                    <option value="Guardians of the Galaxy (2014)">Guardians of the Galaxy</option>
+                    <option value="Pretty Woman (1990)">Pretty Woman</option>
+                    <option value="Sound of Music, The (1965)">The Sound of Music</option>
+                    <option value="Cast Away (2000)">Cast Away</option>
+                    <option value="Monsters, Inc. (2001)">Monsters Inc.</option>
+                </select>
+                <!-- You shouldn't need to change the submit button -->
+                <input type="submit" class="btn btn-primary btn-lg" value="Predict!">
             </form>
           </div>
         </div>  
