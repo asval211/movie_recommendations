@@ -84,6 +84,45 @@ This visualization shows the top ten movies our user should watch after selectin
 
 We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.8715. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7877.
 
+## Deployment
+We were able to deploy an app of our Final Model onto our local computer. We briefly explain below what we did to create the app:
+
+### Requirements
+
+We used Python 3.8.5, Flask 1.1.2, and scikit-learn 0.23.2. All python packages can be found in the `requirements.txt` file.  The requirements are in `pip` style, because this is supported by Heroku.
+
+We created a new `conda` environment to use this deployment:
+```bash
+conda create --name flask-env pip
+conda activate flask-env
+pip install -r requirements.txt
+```
+
+It only included the requirements for the Flask app.
+
+### Running the Flask Application
+
+To run in a development environment (on your local computer), run:
+```bash
+export FLASK_ENV=development
+env FLASK_APP=app.py flask run
+```
+
+This produced the output below:
+```
+ * Serving Flask app "app.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: <PIN>
+```
+
+This server needs to stay running in the terminal for the application to work. If you want to do something else in the terminal, you need to open a new window/tab, or shut down the server with CTRL+C. **DO NOT** just close the terminal window when you are done running the Flask app — it will keep running in the background and cause problems until you locate the process ID and terminate it — always make sure you use CTRL+C.
+
+You need to copy the URL http://127.0.0.1:5000/ and paste it into a web browser. You should see the homepage of the example app and use it to receive movie recommendations!
+
 ## Next Steps
 One idea we would like to pursue in the future is to make a recommendation system model based on movie tags. You would use this model to figure out the correlation between tags for movies with similar tags and use that information to output movie recommendations based on how similar the tags are to each other. We used a small dataset from MovieLens to create our movie recommendation system model and we want to use a bigger dataset so we can include more movies for improved performance. Achieving this may require using a computer that can handle more storage or figuring out a solution to free up storage on our current computers. We also want to find the demographics of each user so we can better predict which movies they will want to watch next.
 
