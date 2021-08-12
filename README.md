@@ -72,15 +72,15 @@ After building a function for our Final Model, we were able to figure out the to
 
 This visualization shows the top ten movies our user should watch after selecting **Shrek 2**.
 
-![graph7](./images/shrek_2_update.PNG)
+![graph7](./images/shrek_2_final.PNG)
 
 This visualization shows the top ten movies our user should watch after selecting **Harry Potter and the Chamber of Secrets**.
 
-![graph5](./images/harry_potter_2_update.PNG)
+![graph5](./images/harry_potter_2_final.PNG)
 
 This visualization shows the top ten movies our user should watch after selecting **Inception**.
 
-![graph6](./images/inception_update.PNG)
+![graph6](./images/inception_final.PNG)
 
 We imported the Surprise library to find the RMSE for our Baseline Model and our Final Model. Our best RMSE score from the Baseline Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.8715. Our best RMSE score from the Final Model came from the Singular Value Decomposition (SVD) model where the RMSE = 0.7877.
 
